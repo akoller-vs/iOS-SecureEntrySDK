@@ -19,7 +19,10 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = '4.2'
 
-  spec.source_files  = "SecureEntryView/*.{h,swift}", "OTP/3rdParty/*.swift", "OTP/3rdParty/CryptoSwift/**/*.swift", "OTP/TMSwiftOTP/**/*.{h,swift}" 
+  spec.source_files  = "SecureEntryView/*.{h,swift}", "OTP/3rdParty/*.swift", "OTP/3rdParty/CryptoSwift/**/*.swift", "OTP/TMSwiftOTP/**/*.{h,swift}"
   spec.exclude_files = "OTP/TMSwiftOTP/Tests/*"
 
+  spec.resource_bundles = {
+    "iOS-SecureEntrySDK" =>  ["SecureEntryView/*.xcassets"]
+  }
 end
